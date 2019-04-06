@@ -1,0 +1,14 @@
+version: '2'
+services:
+  iot_quic_server:
+    build: ./iot_quic_server
+    image: iot_quic_server:latest
+    ports:
+    - "20190:20190"
+    environment:
+    - LOGLEVEL=debug
+  iot_quic_device:
+    build: ./iot_quic_device
+    image: iot_quic_device:latest
+    links:
+    - iot_quic_server

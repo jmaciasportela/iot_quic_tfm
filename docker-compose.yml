@@ -6,7 +6,7 @@ services:
     ports:
     - "20190:20190"
     environment:
-    - LOGLEVEL=debug
+    - LOGLEVEL=info
   iot_quic_device:
     build: ./iot_quic_device
     image: iot_quic_device:latest
